@@ -9,7 +9,9 @@ Advantage of JavaScript function
 There are mainly two advantages of JavaScript functions.
 
 Code reusability: We can call a function several times so it save coding.
-Less coding: It makes our program compact. We don’t need to write many lines of code each time to perform a common task.
+Less coding: It makes our program compact. We don’t need to write many lines of code 
+each time to perform a common task.
+
 
 -->
 
@@ -21,31 +23,31 @@ Less coding: It makes our program compact. We don’t need to write many lines o
          
 		  
 		
-		/*
+		
 		 var a=10;
 		 var b=20;
 		 var sum=a+b;
 		 document.write ("sum of a & b are : " + sum);
-		*/
 		 
 		// simple function
 		
 		/*
-		function sum() 
+		
+		function sayHello() 
 		 {
-		     var a=10;
-			 var b=20;
-			 var sum=a+b;
-			 document.write("sum of a & b are : " + sum);
+		    var sum;
+			var a=50;
+			var b=20;
+			sum=a+b;
+            document.write ("sum of a & b are : " + sum + "<br>");
          }
-		sum()
-		sum()
-		sum()
-		sum()
-		sum()
+		 sayHello(); 
+		 sayHello(); 
+		
+		
 		*/
-		
-		
+		 
+		 
 		// parameter function
 		
    		/*
@@ -55,46 +57,24 @@ Less coding: It makes our program compact. We don’t need to write many lines o
 			sum=a+b;
             document.write ("sum of a & b are : " + sum + "<br>");
          }
-		parameter(5,10) 
-		parameter(7,10) 
-		parameter(5,10) 
+		 parameter(5,10);
+		 parameter(7,1);
+		 parameter(70,1);
+		 parameter(7,10);
+		
 		*/
-		
-		// default value
-		
-		/*
-		 function sum(a=0,b=0) 
-		 {
-		    var sum;
-			sum=a+b;
-            document.write ("sum of a & b are : " + sum + "<br>");
-         }
-		 sum(8,10);
-		 sum(5);
-		 sum();
 		 
-		*/ 
-		
-		
-		
+		 
 		// return function 
-		
-		function helloreturn(a,b) 
+		function sayhi_return(a,b) 
 		 {
 		    var sum;
 			sum=a+b;
             return sum;
          }
-		document.write(helloreturn(5,10));
+		sayhi_return(5,5);
 		
-		
-		
-		// build in function
-		
-		var today = new Date();
-		document.write(today+"<br>");
-		
-      </script>
+	
       
    </head>
    

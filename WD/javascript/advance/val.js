@@ -23,9 +23,9 @@ function reg_form(str)
 	}
 	
 	
-	if(str.pass.value.length<8)
+	if(!(str.pass.value.length>8 && str.pass.value.length<12))
 	{
-	document.getElementById("msg1").innerHTML="! Please enter minimum 8 digit length";
+	document.getElementById("msg1").innerHTML="! Please enter Beetwen  8 to 12 digits length";
 	str.pass.focus();
 	return false;
 	}
@@ -174,20 +174,18 @@ function reg_form(str)
 		}
 	} 
 	
-	//below function is for image validation
 	function check1(file)
 	{
-	
-	var filename=file.value;
-	var ext=filename.substring(filename.lastIndexOf('.')+1);
-		if(ext=="PDF" || ext=="")
+		var filename=file.value;
+		var ext=filename.substring(filename.lastIndexOf('.')+1);
+		if(ext=="PDF" || ext=="pdf")
 		{
 		document.getElementById("msg1").innerHTML="";
 		document.getElementById("submit").disabled=false;
 		}
 		else
 		{
-		document.getElementById("msg1").innerHTML="! Please upload only JPG , GIF , JPEG File";
+		document.getElementById("msg1").innerHTML="! Please upload only PDF File";
 		document.getElementById("submit").disabled=true;
 		}
 	} 

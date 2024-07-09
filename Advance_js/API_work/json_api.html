@@ -1,4 +1,3 @@
-
 <!--
 The insertAdjacentHTML() method of the Element interface 
 parses the specified text as HTML or XML and inserts the 
@@ -32,48 +31,57 @@ After the element. Only valid if the element is in the DOM tree and has a parent
     <title>Document</title>
   </head>
   <body>
-  
-<!--
-  Definition and Usage
-The insertAdjacentHTML() method inserts HTML code into a specified position.
 
-Legal positions:
-
-Value	Description
-
-afterbegin	After the beginning of the element (first child)
-afterend	After the element
-beforebegin	Before the element
-beforeend	Before the end of the element (last child)
-  
-  -->
   
   
-  <!--
-  <button onclick="myFunction()">Insert</button>
-	<p>Click "Insert" to insert a paragraph after the header.</p>
-
-	<h2 id="myH2">My Header</h2>
-
-	<script>
-	function myFunction() {
-	  const h2 = document.getElementById("myH2");
-	  let html = "<p>My new paragraph.</p>";
-	  h2.insertAdjacentHTML("afterend", html);
-	}
-	</script>
-  -->
   
-  <div style="border:solid" id="data">
-	<h1>Hi i am HEADER</h1>
-  </div>
+  
+  
+  
+  
+  <table border='1' id="data">
+  
+  </table>
   
   
     <script>
 	
-	 const data = document.getElementById("data");
-	 var html = "<p>My new paragraph.</p>";
-	 data.insertAdjacentHTML('afterbegin',html);	
+      let jsonData = `[
+        {
+            "id": 1,
+            "productName": "Apple",
+            "Qty": 100
+        },
+        {
+            "id": 2,
+            "productName": "Pineapple",
+            "Qty": 120
+        },
+        {
+            "id": 3,
+            "productName": "Mango",
+            "Qty": 10
+        }
+    ]`;
+		
+
+        let obj = JSON.parse(jsonData)
+		
+		const div=document.getElementById('data');
+		
+		for(const myData of obj)
+		{
+           
+			var html=`<tr>
+						<td>${myData.id}</td>
+						<td>${myData.productName}</td>
+						<td>${myData.Qty}</td>						
+					  </tr>`;
+			div.insertAdjacentHTML("afterbegin", html);
+		}
+		
+	
+	
 	</script>
 	
 	

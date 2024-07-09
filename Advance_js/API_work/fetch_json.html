@@ -15,25 +15,27 @@
   .then((response) => response.json())
   .then((object) => {
    
-   //console.log(object)
-    showall(object)  // call showall function	
+   console.log(object);
+   show(object)
   });
   
   
-  function showall(myobject)
+  const div=document.getElementById('data');
+  
+  function show(objarr)
   {
-	    const data=document.getElementById('data');
-		for(const myData of myobject)
+		for(const myData of objarr)
 		{
-           const html=`
-				<tr>
-					<td>${myData.id}</td>
-					<td>${myData.title}</td>
-					<td>${myData.body}</td>
-				</tr>`;
-		   data.insertAdjacentHTML('beforeend', html);
+           
+			var html=`<tr>
+						<td>${myData.id}</td>
+						<td>${myData.title}</td>
+						<td>${myData.body}</td>						
+					  </tr>`;
+			div.insertAdjacentHTML("afterbegin", html);
 		}
   }
+  
 </script>
 
 

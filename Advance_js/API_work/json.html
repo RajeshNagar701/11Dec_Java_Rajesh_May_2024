@@ -9,29 +9,23 @@
   <body>
     <script>
       let jsonData = `
-      {
-    "companyName": "Krishna Info Tech",
-    "address": "Surat Varacha",
-    "TotalEmployee": 20,
-    "products": [
-        {
-            "id": 1,
-            "productName": "Apple",
-            "Qty": 100
-        },
-        {
-            "id": 2,
-            "productName": "Pineapple",
-            "Qty": 120
-        },
-        {
-            "id": 3,
-            "productName": "Mango",
-            "Qty": 10
-        }
-    ]
-}
-        `;
+		[	
+			{
+				"id": 1,
+				"productName": "Apple",
+				"Qty": 100
+			},
+			{
+				"id": 2,
+				"productName": "Pineapple",
+				"Qty": 120
+			},
+			{
+				"id": 3,
+				"productName": "Mango",
+				"Qty": 10
+			}
+		]`;
 		
 		
 		// convert json to object 
@@ -43,7 +37,7 @@
         //     console.log(Object.products[i])
         // }
 
-        for(const myData of Object.products)
+        for(const myData of Object)
 		{
             document.write(`<p>${myData.id} : ${myData.productName} , Total Quantity : ${myData.Qty}</p>`)
         }
@@ -58,10 +52,8 @@
 		console.log(myJSON); // json
 		
 		
-		// url 
-		fetch('https://jsonplaceholder.typicode.com/posts')
-		  .then(response => response.json())
-		  .then(obj => console.log(obj))
+		
+		
       
     </script>
   </body>

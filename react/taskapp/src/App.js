@@ -8,11 +8,14 @@ import Mycss from './css/Mycss'
 import Mycss1 from './css/Mycss1'
 import Mymodule from './module_css/Mymodule'
 import Mymodule1 from './module_css/Mymodule1'
+import Simple_Bootstrap from './Bootstrap/Simple_Bootstrap'
+import React_bootsrap from './Bootstrap/React_bootsrap'
+import Props_main from './Props/Props_main'
 
 function App() {
 
   return (
-    <div>
+    <div className='container mt-5'>
         {
           // component
           //<Func_component/>
@@ -30,11 +33,19 @@ function App() {
           
 
           //Module css
+          //<Mymodule/>
+          //<Mymodule1/>
+        
+          //Bootstrap 
+          //<Simple_Bootstrap/>
+          //<React_bootsrap/>
+
+          // Props
+          <Props_main/>
 
         }
 
-          <Mymodule/>
-          <Mymodule1/>
+          
 
     </div>
   )

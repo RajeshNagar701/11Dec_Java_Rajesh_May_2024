@@ -7,7 +7,7 @@ import Footer from './Footer'
 function Home() {
   return (
     <>
-    <Header/>
+    <Header title="Home Page"/>
     <Banner/>
     <div className="container mt-5">
       <div className="row">

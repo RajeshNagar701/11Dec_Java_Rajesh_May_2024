@@ -11,6 +11,9 @@ import Mymodule1 from './module_css/Mymodule1'
 import Simple_Bootstrap from './Bootstrap/Simple_Bootstrap'
 import React_bootsrap from './Bootstrap/React_bootsrap'
 import Props_main from './Props/Props_main'
+import Class_state from './State/Class/Class_state'
+import Func_state from './State/Function/Func_state'
+import Crud_Handeling from './Form_Handeling/Crud_Handeling'
 
 function App() {
 
@@ -41,9 +44,16 @@ function App() {
           //<React_bootsrap/>
 
           // Props
-          <Props_main/>
+          //<Props_main/>
 
-        }
+
+          //state
+          //<Class_state/>
+          //<Func_state/>
+          
+          //Form handeling Crud
+          <Crud_Handeling/>
+       }
 
           
 

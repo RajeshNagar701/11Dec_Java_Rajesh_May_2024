@@ -1,0 +1,90 @@
+/* Create a variable to define the color of the text: */
+
+$bgc: lightblue;
+$tc: darkblue;
+$fs: 18px;
+
+.box{
+    background-color: $bgc;
+    color: $tc;
+    font-size: $fs;
+    width: 100px;
+    height: 100px;
+}
+
+/* Sass Nested Rules */
+
+.nav1 {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+      background-color: $bgc;
+      color: $tc;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+  
+
+  /* Sass Nested Properties */
+
+  .myfont{
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+      }
+  }
+
+  .mytext{
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+      }
+  }
+  
+  
+  /* Sass @extend and Inheritance */
+
+  .btn{
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: lightgrey  
+  }
+
+  .red{
+    @extend .btn;
+    background-color: red;
+  }
+
+  .blue{
+    @extend .btn;
+    background-color: blue;
+  }
+
+  .green{
+    @extend .btn;
+    background-color: green;
+  }
+
+  .pink{
+    @extend .btn;
+    background-color: pink;
+  }
+
+  .yellow{
+    @extend .btn;
+    background-color: yellow;
+  }

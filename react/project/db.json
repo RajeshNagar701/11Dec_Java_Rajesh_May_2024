@@ -1,0 +1,158 @@
+{
+  "location": [
+    {
+      "id": "1",
+      "location_name": "Maninagar"
+    },
+    {
+      "id": "2",
+      "location_name": "Satelite"
+    },
+    {
+      "id": "3",
+      "location_name": "Gota"
+    }
+  ],
+  "contact": [
+    {
+      "id": "1",
+      "Name": "Raj Nagar",
+      "Mobile": "321354564",
+      "Email": "rajnagar@gmail.com",
+      "Comment": "hello address plz"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "Name": "Raj Nagar",
+      "Email": "rajnagar@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "name": "Raj Nagar",
+      "email": "rajnagar@gmail.com",
+      "password": "1234",
+      "mobile": "123456789",
+      "image": "https://via.placeholder.com/150/92c952",
+      "status": "Unblock"
+    },
+    {
+      "id": "2",
+      "name": "Mahesh Nagar",
+      "email": "Maheshnagar@gmail.com",
+      "password": "1234",
+      "mobile": "123456789",
+      "image": "https://via.placeholder.com/600/771796",
+      "status": "Block"
+    }
+  ],
+  "artist": [
+    {
+      "id": "1",
+      "name": "Raj Nagar",
+      "shop_name": "Raj Makup",
+      "email": "rajnagar@gmail.com",
+      "password": "1234",
+      "mobile": "123456789",
+      "loc_id": "1",
+      "address": "Maninagar cross road",
+      "image": "https://via.placeholder.com/150/92c952",
+      "status": "Unblock"
+    },
+    {
+      "id": "2",
+      "name": "Heena Nagar",
+      "shop_name": "Heena Makup",
+      "email": "Heenanagar@gmail.com",
+      "password": "1234",
+      "mobile": "123456789",
+      "loc_id": "2",
+      "address": "satelite cross road",
+      "image": "https://via.placeholder.com/150/92c952",
+      "status": "Unblock"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "art_id": "1",
+      "ser_name": "Hair Cut",
+      "price": "299",
+      "description": "Hair cut at 299"
+    },
+    {
+      "id": "2",
+      "art_id": "1",
+      "ser_name": "Facial",
+      "price": "1299",
+      "description": "Facial at 1299"
+    }
+  ],
+  "work": [
+    {
+      "id": "1",
+      "art_id": "1",
+      "work_title": "Hair Cut",
+      "work_img": "https://via.placeholder.com/150/56a8c2",
+      "work_description": "Hair cut at 299"
+    },
+    {
+      "id": "2",
+      "art_id": "1",
+      "work_title": "Facial",
+      "work_img": "https://via.placeholder.com/150/56a8c2",
+      "work_description": "Facial at 299"
+    }
+  ],
+  "request": [
+    {
+      "id": "1",
+      "art_id": "1",
+      "cust_id": "1",
+      "comment": "Facial price plz",
+      "mobile": "4564654"
+    },
+    {
+      "id": "2",
+      "art_id": "2",
+      "cust_id": "2",
+      "comment": "Hair cut price plz",
+      "mobile": "4564654"
+    }
+  ],
+  "appointment": [
+    {
+      "id": "1",
+      "ser_id": "1",
+      "art_id": "1",
+      "cust_id": "2",
+      "app_date": "2024-12-12",
+      "app_time": "16:30",
+      "remark": "kindely starts on time"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "1",
+      "app_id": "1",
+      "rating": "4",
+      "comment": "Facial good work"
+    },
+    {
+      "id": "2",
+      "app_id": "1",
+      "rating": "4",
+      "comment": "Facial good work"
+    },
+    {
+      "id": "3",
+      "app_id": "1",
+      "rating": "4",
+      "comment": "Facial good work"
+    }
+  ]
+}

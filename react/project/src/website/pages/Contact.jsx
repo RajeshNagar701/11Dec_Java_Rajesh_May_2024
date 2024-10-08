@@ -1,10 +1,25 @@
 import React from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
-
+import { Helmet } from 'react-helmet'
 function Contact() {
   return (
     <div>
+     
+     <Helmet>
+        <link href="//fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="website/assets/css/style-starter.css" />
+
+        <script src="website/assets/js/theme-change.js"></script>
+        <script src="website/assets/js/jquery.min.js"></script>
+        <script src="website/assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="website/assets/js/jquery.zoomslider.min.js"></script>
+        <script src="website/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="website/assets/js/owl-carousel.js"></script>
+        <script src="website/assets/js/bootstrap.min.js"></script>
+      </Helmet>
       <div className="main-content">
         <Header/>
         {/* //left header */}

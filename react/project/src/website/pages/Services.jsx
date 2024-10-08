@@ -1,10 +1,26 @@
 import React from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
-
+import { Helmet } from 'react-helmet'
 function Services() {
   return (
     <div>
+     
+     <Helmet>
+        <link href="//fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="website/assets/css/style-starter.css" />
+        <script src="website/assets/js/theme-change.js"></script>
+        <script src="website/assets/js/jquery.min.js"></script>
+        <script src="website/assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="website/assets/js/jquery.zoomslider.min.js"></script>
+        <script src="website/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="website/assets/js/owl-carousel.js"></script>
+        <script src="website/assets/js/bootstrap.min.js"></script>
+      </Helmet>
+
+
       <div className="main-content">
         <Header />
         {/* right content */}
@@ -32,7 +48,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img1.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img1.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Makeup</h4>
@@ -45,7 +61,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img2.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img2.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Hairdressing</h4>
@@ -58,7 +74,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img3.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img3.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Massage Therapy</h4>
@@ -71,7 +87,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img4.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img4.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Pedicure</h4>
@@ -84,7 +100,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img5.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img5.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Hair Style</h4>
@@ -97,7 +113,7 @@ function Services() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img6.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img6.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>aromatherapy</h4>

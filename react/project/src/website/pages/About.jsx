@@ -1,11 +1,26 @@
 import React from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
-
+import { Helmet } from 'react-helmet'
 function About() {
   return (
 
     <div>
+      
+      <Helmet>
+        <link href="//fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="website/assets/css/style-starter.css" />
+
+        <script src="website/assets/js/theme-change.js"></script>
+        <script src="website/assets/js/jquery.min.js"></script>
+        <script src="website/assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="website/assets/js/jquery.zoomslider.min.js"></script>
+        <script src="website/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="website/assets/js/owl-carousel.js"></script>
+        <script src="website/assets/js/bootstrap.min.js"></script>
+      </Helmet>
       <div className="main-content">
        <Header/>
         {/* right content */}
@@ -30,7 +45,7 @@ function About() {
               <div className="container">
                 <div className="row top-cont-grid align-items-center">
                   <div className="col-lg-6 left-img pr-lg-4">
-                    <img src="assets/images/about.jpg" alt className="img-responsive img-fluid" />
+                    <img src="website/assets/images/about.jpg" alt className="img-responsive img-fluid" />
                   </div>
                   <div className="col-lg-6 text-6-info mt-lg-0 mt-4">
                     <h3 className="title-style">About Us</h3>
@@ -57,7 +72,7 @@ function About() {
                   <div className="team-block-single">
                     <div className="team-grids">
                       <a href="#team-single">
-                        <img src="assets/images/team1.jpg" className="img-fluid" alt />
+                        <img src="website/assets/images/team1.jpg" className="img-fluid" alt />
                       </a><div className="team-info"><a href="#team-single">
                       </a><div className="social-icons-section"><a href="#team-single">
                       </a><a className="fac" href="#facebook">
@@ -82,7 +97,7 @@ function About() {
                   <div className="team-block-single active">
                     <div className="team-grids active">
                       <a href="#team-single">
-                        <img src="assets/images/team2.jpg" className="img-fluid" alt />
+                        <img src="website/assets/images/team2.jpg" className="img-fluid" alt />
                       </a><div className="team-info"><a href="#team-single">
                       </a><div className="social-icons-section"><a href="#team-single">
                       </a><a className="fac" href="#facebook">
@@ -107,7 +122,7 @@ function About() {
                   <div className="team-block-single">
                     <div className="team-grids">
                       <a href="#team-single">
-                        <img src="assets/images/team3.jpg" className="img-fluid" alt />
+                        <img src="website/assets/images/team3.jpg" className="img-fluid" alt />
                       </a><div className="team-info"><a href="#team-single">
                       </a><div className="social-icons-section"><a href="#team-single">
                       </a><a className="fac" href="#facebook">

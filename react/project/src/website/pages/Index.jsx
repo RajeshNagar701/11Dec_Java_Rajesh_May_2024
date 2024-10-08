@@ -1,20 +1,42 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
+import { Helmet } from 'react-helmet'
+
 
 function Index() {
+  useEffect(() => {
+  })
+
   return (
     <div>
+
+      <Helmet>
+        <link href="//fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
+          rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="website/assets/css/style-starter.css" />
+
+        <script src="website/assets/js/theme-change.js"></script>
+        <script src="website/assets/js/jquery.min.js"></script>
+        <script src="website/assets/js/modernizr-2.6.2.min.js"></script>
+        <script src="website/assets/js/jquery.zoomslider.min.js"></script>
+
+        <script src="website/assets/js/owl-carousel.js"></script>
+        <script src="website/assets/js/bootstrap.min.js"></script>
+
+      </Helmet>
+
       <div className="main-content">
-        
-        <Header/>
+
+        <Header />
 
         {/* right content */}
         <div className="right-content-section">
           {/* banner section */}
           <section className="w3l-main-slider" id="home">
             <div className="banner-content">
-              <div id="demo-1" data-zs-src="[&quot;assets/images/banner1.jpg&quot;, &quot;assets/images/banner2.jpg&quot;,&quot;assets/images/banner3.jpg&quot;,&quot;assets/images/banner4.jpg&quot;,&quot;assets/images/banner5.jpg&quot;]" data-zs-overlay="dots">
+              <div id="demo-1" data-zs-src="[&quot;website/assets/images/banner1.jpg&quot;, &quot;website/assets/images/banner2.jpg&quot;,&quot;website/assets/images/banner3.jpg&quot;,&quot;website/assets/images/banner4.jpg&quot;,&quot;website/assets/images/banner5.jpg&quot;]" data-zs-overlay="dots">
                 <div className="demo-inner-content">
                   <div className="container">
                     <div className="banner-info">
@@ -37,7 +59,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img1.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img1.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Makeup</h4>
@@ -50,7 +72,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img2.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img2.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Hairdressing</h4>
@@ -63,7 +85,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img3.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img3.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Massage Therapy</h4>
@@ -76,7 +98,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img4.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img4.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Pedicure</h4>
@@ -89,7 +111,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img5.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img5.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>Hair Style</h4>
@@ -102,7 +124,7 @@ function Index() {
                 <div className="maghny-gd-1 col-md-4 mt-4">
                   <div className="maghny-grid">
                     <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="assets/images/img6.jpg" alt />
+                      <img className="img-fluid" src="website/assets/images/img6.jpg" alt />
                       <figcaption>
                         <div>
                           <h4>aromatherapy</h4>
@@ -203,7 +225,7 @@ function Index() {
                 <div className="col-lg-4 col-sm-6">
                   <div className="blog-card-single">
                     <div className="grids5-info">
-                      <a href="#blog"><img src="assets/images/blog1.jpg" alt /></a>
+                      <a href="#blog"><img src="website/assets/images/blog1.jpg" alt /></a>
                       <div className="blog-info">
                         <h5>November 3, 2020 - <a href="blog-single">New</a></h5>
                         <h4><a href="#blog">Donec sed teus enime</a></h4>
@@ -215,7 +237,7 @@ function Index() {
                 <div className="col-lg-4 col-sm-6 mt-sm-0 mt-4">
                   <div className="blog-card-single">
                     <div className="grids5-info">
-                      <a href="#blog"><img src="assets/images/blog3.jpg" alt /></a>
+                      <a href="#blog"><img src="website/assets/images/blog3.jpg" alt /></a>
                       <div className="blog-info">
                         <h5>November 6, 2020 - <a href="blog-single">New</a></h5>
                         <h4><a href="#blog">It's enim ad minim aute</a></h4>
@@ -227,7 +249,7 @@ function Index() {
                 <div className="col-lg-4 col-sm-6 mt-lg-0 mt-4">
                   <div className="blog-card-single">
                     <div className="grids5-info">
-                      <a href="#blog"><img src="assets/images/blog2.jpg" alt /></a>
+                      <a href="#blog"><img src="website/assets/images/blog2.jpg" alt /></a>
                       <div className="blog-info">
                         <h5>November 7, 2020 - <a href="blog-single">New</a></h5>
                         <h4><a href="#blog">Ullamco laboris nisi uts</a></h4>
@@ -258,7 +280,7 @@ function Index() {
                       </p>
                       <div className="d-grid sub-author-con">
                         <div className="testi-img-res">
-                          <img src="assets/images/testi2.jpg" alt className="img-fluid" />
+                          <img src="website/assets/images/testi2.jpg" alt className="img-fluid" />
                         </div>
                         <div className="testi_grid text-left">
                           <h5>Petey Cruis</h5>
@@ -277,7 +299,7 @@ function Index() {
                       </p>
                       <div className="d-grid sub-author-con">
                         <div className="testi-img-res">
-                          <img src="assets/images/testi1.jpg" alt className="img-fluid" />
+                          <img src="website/assets/images/testi1.jpg" alt className="img-fluid" />
                         </div>
                         <div className="testi_grid text-left">
                           <h5>Molive Joe</h5>
@@ -296,7 +318,7 @@ function Index() {
                       </p>
                       <div className="d-grid sub-author-con">
                         <div className="testi-img-res">
-                          <img src="assets/images/testi3.jpg" alt className="img-fluid" />
+                          <img src="website/assets/images/testi3.jpg" alt className="img-fluid" />
                         </div>
                         <div className="testi_grid text-left">
                           <h5>Paige Turner</h5>
@@ -310,8 +332,8 @@ function Index() {
             </div>
           </div>
           {/* //testimonial section */}
-          
-          <Footer/>
+
+          <Footer />
 
         </div>
         {/* //right content */}
@@ -321,6 +343,10 @@ function Index() {
       <button onclick="topFunction()" id="movetop" title="Go to top">
         <span className="fa fa-level-up" aria-hidden="true" />
       </button>
+
+      <Helmet>
+        <script src="website/assets/js/jquery-3.3.1.min.js"></script>
+      </Helmet>
     </div>
 
   )

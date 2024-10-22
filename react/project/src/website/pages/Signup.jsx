@@ -3,29 +3,31 @@ import Header from '../component/Header'
 import Footer from '../component/Footer'
 import { Helmet } from 'react-helmet'
 import axios from 'axios';
-function Contact() {
+function Signup() {
 
   const [formvalue, setFormvalue] = useState({
     id: "",
     name:"",
     email: "",
     mobile: "",
-    comment: "",
+    password: "",
+    image: "",
+    status:""
 });
 
 const changeHandel = (e) => {
-    setFormvalue({ ...formvalue, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
+    setFormvalue({ ...formvalue, id: new Date().getTime().toString(),status:"Unblock", [e.target.name]: e.target.value });
     console.log(formvalue);
 }
 
 const onSubmithandel =async (e) => {
   e.preventDefault(); // on submit not refresh page
-  const res=await axios.post(`http://localhost:3000/contact`,formvalue);
+  const res=await axios.post(`http://localhost:3000/customer`,formvalue);
   console.log(res);
   if(res.status==201)
   {
-    alert('INquiry submitted suuccess !');
-    setFormvalue({...formvalue,name:"",email:"",mobile:"",comment:""});
+    alert('Signup suuccess !');
+    setFormvalue({...formvalue,name:"",email:"",mobile:"",password:"",image:""});
     return false;
   }
 }
@@ -56,10 +58,10 @@ const onSubmithandel =async (e) => {
           <div className="inner-banner">
             <section className="w3l-breadcrumb">
               <div className="container">
-                <h4 className="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">Contact Us</h4>
+                <h4 className="inner-text-title font-weight-bold text-white mb-sm-3 mb-2">Signup Us</h4>
                 <ul className="breadcrumbs-custom-path">
                   <li><a href="index.html">Home</a></li>
-                  <li className="active"><span className="fa fa-chevron-right mx-2" aria-hidden="true" /> Contact
+                  <li className="active"><span className="fa fa-chevron-right mx-2" aria-hidden="true" /> Signup
                     Us</li>
                 </ul>
               </div>
@@ -69,58 +71,37 @@ const onSubmithandel =async (e) => {
           {/* contact page */}
           <section className="w3l-contacts-12 py-5">
             <div className="container py-lg-5 py-md-4 py-3">
-              <h3 className="title-style">Contact Us</h3>
-              <p>Contact with us now</p>
+              <h3 className="title-style">Signup Us</h3>
               <div className="row contact-grids mt-5">
-                <div className="col-lg-7 contacts12-main">
+                <div className="col-lg-12 contacts12-main">
                   <form action="" method="post" className="signin-form">
                     <div className="row input-grids">
                       <div className="col-sm-6">
                         <input type="text" name="name" value={formvalue.name} onChange={changeHandel} placeholder="Full name" className="contact-input" />
                       </div>
+                      <div className="col-sm-6">
+                        <input type="text" name="mobile" value={formvalue.mobile} onChange={changeHandel} placeholder="Phone number" className="contact-input" />
+                      </div>
+                      
+                    </div>
+                    <div className="row input-grids my-4">
+                      
                       <div className="col-sm-6 mt-sm-0 mt-4">
                         <input type="email" name="email" value={formvalue.email} onChange={changeHandel} placeholder="Your email" className="contact-input" />
                       </div>
+                      <div className="col-sm-6 mt-sm-0 mt-4">
+                        <input type="password" name="password" value={formvalue.password} onChange={changeHandel} placeholder="Your Password" className="contact-input" />
+                      </div>
                     </div>
                     <div className="row input-grids my-4">
-                      <div className="col-sm-12">
-                        <input type="text" name="mobile" value={formvalue.mobile} onChange={changeHandel} placeholder="Phone number" className="contact-input" />
-                      </div>
                       <div className="col-sm-12 mt-sm-0 mt-4">
-                        <textarea name="comment" value={formvalue.comment} onChange={changeHandel} placeholder="Type your message here" required defaultValue={""} />
+                        <input type="url" name="image" value={formvalue.image} onChange={changeHandel} placeholder="Your Image URL" className="contact-input" />
                       </div>
                     </div>
-                    <button type="submit" onClick={onSubmithandel} className="btn btn-style mt-5">Send Message</button>
+                    <button type="submit" onClick={onSubmithandel} className="btn btn-style mt-5">Signup</button>
                   </form>
                 </div>
-                <div className="col-lg-5 contact-right mt-lg-0 mt-5">
-                  <div className="details-style d-flex">
-                    <span className="fa fa-map-marker" />
-                    <div className="location-info">
-                      <span>Location</span>
-                      <p> Dolor sit, #PTH, 55030, 8500 Lorem Street</p>
-                      <p>sed at ipsum, #2114 agro towers</p>
-                      <p>United kingdom, UK.</p>
-                    </div>
-                  </div>
-                  <div className="details-style d-flex">
-                    <span className="fa fa-envelope-open" />
-                    <div className="email-info">
-                      <span>Have any Questions?</span>
-                      <a href="mailto:hello@example.com">hello@example.com</a>
-                    </div>
-                  </div>
-                  <div className="details-style d-flex">
-                    <span className="fa fa-phone" />
-                    <div className="email-info">
-                      <span>Phone Number</span>
-                      <a href="tel:(123) 456-78-90"> (123) 456-78-90</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007" allowFullScreen />
+         
               </div>
             </div>
           </section>
@@ -139,4 +120,4 @@ const onSubmithandel =async (e) => {
   )
 }
 
-export default Contact
+export default Signup

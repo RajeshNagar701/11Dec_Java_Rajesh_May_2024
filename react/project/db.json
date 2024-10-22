@@ -15,11 +15,18 @@
   ],
   "contact": [
     {
-      "id": "1",
-      "Name": "Raj Nagar",
-      "Mobile": "321354564",
-      "Email": "rajnagar@gmail.com",
-      "Comment": "hello address plz"
+      "id": "1729575335761",
+      "name": "nagar",
+      "email": "nagar@gmail.com",
+      "mobile": "21654564",
+      "comment": "hello friends"
+    },
+    {
+      "id": "1729575370874",
+      "name": "mahesh",
+      "email": "mahesh@gmail.com",
+      "mobile": "46874664",
+      "comment": "helloo address "
     }
   ],
   "admin": [
@@ -32,22 +39,22 @@
   ],
   "customer": [
     {
-      "id": "1",
-      "name": "Raj Nagar",
-      "email": "rajnagar@gmail.com",
+      "id": "1729575943074",
+      "name": "mahesh",
+      "email": "mahesh@gmail.com",
+      "mobile": "46874664",
       "password": "1234",
-      "mobile": "123456789",
-      "image": "https://via.placeholder.com/150/92c952",
+      "image": "https://via.placeholder.com/600/92c952",
       "status": "Unblock"
     },
     {
-      "id": "2",
-      "name": "Mahesh Nagar",
-      "email": "Maheshnagar@gmail.com",
-      "password": "1234",
-      "mobile": "123456789",
-      "image": "https://via.placeholder.com/600/771796",
-      "status": "Block"
+      "id": "1729576158410",
+      "name": "nirav",
+      "email": "nirav@gmail.com",
+      "mobile": "2456465",
+      "password": "41564564564",
+      "image": "https://via.placeholder.com/600/56a8c2",
+      "status": "Unblock"
     }
   ],
   "artist": [

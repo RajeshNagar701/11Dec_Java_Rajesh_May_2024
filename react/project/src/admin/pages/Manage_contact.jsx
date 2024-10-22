@@ -61,10 +61,10 @@ function Manage_contact() {
                                                         return (
                                                             <tr className="odd gradeX">
                                                                 <td>{value.id}</td>
-                                                                <td>{value.Name}</td>
-                                                                <td>{value.Mobile}</td>
-                                                                <td>{value.Email}</td>
-                                                                <td>{value.Comment}</td>
+                                                                <td>{value.name}</td>
+                                                                <td>{value.mobile}</td>
+                                                                <td>{value.email}</td>
+                                                                <td>{value.comment}</td>
                                                                 <td className="center">
                                                                     <button className='btn btn-primary'>Edit</button>
                                                                     <button className='btn btn-danger'  onClick={()=>deleteHandel(value.id)}>Delete</button>

@@ -35,6 +35,9 @@ function Header() {
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/signup">Signup Us</NavLink>
+                </li>
                 {/* search button */}
                 <div className="search-right">
                   <form action="#search" method="GET" className="search-box d-flex align-items-center position-relative">

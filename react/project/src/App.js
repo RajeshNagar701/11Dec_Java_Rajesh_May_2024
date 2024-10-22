@@ -15,6 +15,7 @@ import Manage_feedback from "./admin/pages/Manage_feedback";
 import Manage_contact from "./admin/pages/Manage_contact";
 import Add_artist from "./admin/pages/Add_artist";
 import Alogin from "./admin/pages/Alogin";
+import Signup from "./website/pages/Signup";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/about' element={<><About /></>}></Route>
         <Route path='/services' element={<><Services /></>}></Route>
         <Route path='/contact' element={<><Contact /></>}></Route>
+        <Route path='/signup' element={<><Signup /></>}></Route>
 
         <Route path='/admin-login' element={<><Alogin /></>}></Route>
         <Route path='/dashboard' element={<><Dashboard /></>}></Route>

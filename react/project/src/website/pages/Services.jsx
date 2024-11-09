@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import { Helmet } from 'react-helmet'
+import axios from 'axios'
 function Services() {
+  // useffect hooks called function automatic wehen com load
+  useEffect(() => {
+    fetch();
+  })
+
+  const [data, setData] = useState([]);
+  const fetch = async () => {
+    const res = await axios.get(`http://localhost:3000/artist`);
+    console.log(res.data);
+    setData(res.data);
+  }
   return (
     <div>
-     
-     <Helmet>
+
+      <Helmet>
         <link href="//fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700;900&display=swap"
           rel="stylesheet" />
         <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
@@ -42,87 +54,29 @@ function Services() {
           {/* services section */}
           <div className="best-rooms py-5">
             <div className="container py-md-5 py-4">
-              <h3 className="title-style">Our Services</h3>
+              <h3 className="title-style">Our Artist  </h3>
               <p className="sub-title">We offer best range of beauty services</p>
               <div className="row mt-5">
-                <div className="maghny-gd-1 col-md-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img1.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>Makeup</h4>
-                          <p>From 36$ </p>
+                {
+                  data && data.map((value, index, arr) => {
+                    return (
+                      <div className="maghny-gd-1 col-md-4">
+                        <div className="maghny-grid">
+                          <figure className="effect-lily border-radius">
+                            <img height={"300px"} src={value.image} alt />
+                            <figcaption>
+                              <div>
+                                <h4>{value.shop_name}</h4>
+                                <p>View </p>
+                              </div>
+                            </figcaption>
+                          </figure>
                         </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img2.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>Hairdressing</h4>
-                          <p>From 63$ </p>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div className="maghny-gd-1 col-md-4 mt-md-0 mt-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img3.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>Massage Therapy</h4>
-                          <p>From 28$ </p>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div className="maghny-gd-1 col-md-4 mt-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img4.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>Pedicure</h4>
-                          <p>From 67$ </p>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div className="maghny-gd-1 col-md-4 mt-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img5.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>Hair Style</h4>
-                          <p>From 76$ </p>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div className="maghny-gd-1 col-md-4 mt-4">
-                  <div className="maghny-grid">
-                    <figure className="effect-lily border-radius">
-                      <img className="img-fluid" src="website/assets/images/img6.jpg" alt />
-                      <figcaption>
-                        <div>
-                          <h4>aromatherapy</h4>
-                          <p>From 36$ </p>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
+                      </div>
+                    )
+                  })
+                }
+
               </div>
             </div>
           </div>

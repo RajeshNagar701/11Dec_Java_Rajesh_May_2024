@@ -1,11 +1,61 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Aheader from '../component/Aheader'
 import Afooter from '../component/Afooter'
+import axios from 'axios';
 
 function Add_artist() {
+
+    // useffect hooks called function automatic wehen com load
+    useEffect(() => {
+        fetch();
+    });
+
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        const res = await axios.get(`http://localhost:3000/location`);
+        console.log(res.data);
+        setData(res.data);
+    }
+
+    const [formvalue, setFormvalue] = useState({
+        name: "",
+        shop_name: "",
+        email: "",
+        password: "",
+        mobile: "",
+        loc_id: "",
+        address: "",
+        image: "",
+    });
+
+    const changeHandel = (e) => {
+        setFormvalue({ ...formvalue, id: new Date().getTime().toString(),status:"Unblock", [e.target.name]: e.target.value });
+        console.log(formvalue);
+    }
+
+    const onSubmithandel = async (e) => {
+        e.preventDefault(); // on submit not refresh page
+        const res = await axios.post(`http://localhost:3000/artist`, formvalue);
+        console.log(res);
+        if (res.status == 201) {
+            alert('Artist add suuccess !');
+            setFormvalue({
+                ...formvalue, name: "",
+                shop_name: "",
+                email: "",
+                password: "",
+                mobile: "",
+                loc_id: "",
+                address: "",
+                image: ""
+            });
+            return false;
+        }
+    }
+
     return (
         <div>
-            <Aheader/>
+            <Aheader />
             <div className="content-wrapper">
                 <div className="container">
                     <div className="row pad-botm">
@@ -20,91 +70,61 @@ function Add_artist() {
                                     Add Artist
                                 </div>
                                 <div className="panel-body">
-                                    <form role="form">
+                                    <form role="form" method="post" onSubmit={onSubmithandel}>
+                                        <div className="form-group">
+                                            <label>Select Location</label>
+                                            <select value={formvalue.loc_id} onChange={changeHandel} name="loc_id" className="form-control">
+                                                <option value="">Select Location</option>
+                                                {
+                                                    data && data.map((value, index, arr) => {
+                                                        return (
+                                                            <option value={value.id}>
+                                                                {value.location_name}
+                                                            </option>
+                                                        )
+                                                    })
+                                                }
+                                            </select>
+                                        </div>
                                         <div className="form-group">
                                             <label>Enter Name</label>
-                                            <input className="form-control" type="text" />
-                                            <p className="help-block">Help text here.</p>
+                                            <input value={formvalue.name} onChange={changeHandel} className="form-control" name="name" type="text" />
+                                        </div>
+                                        <div className="form-group">
+                                            <label>Shop Name</label>
+                                            <input value={formvalue.shop_name} onChange={changeHandel} className="form-control" name="shop_name" type="text" />
                                         </div>
                                         <div className="form-group">
                                             <label>Enter Email</label>
-                                            <input className="form-control" type="text" />
-                                            <p className="help-block">Help text here.</p>
+                                            <input value={formvalue.email} onChange={changeHandel} className="form-control" name="email" type="text" />
                                         </div>
                                         <div className="form-group">
-                                            <label>Text area</label>
-                                            <textarea className="form-control" rows={3} defaultValue={""} />
+                                            <label>Password</label>
+                                            <input value={formvalue.password} onChange={changeHandel} className="form-control" name="password" type="password" />
                                         </div>
                                         <div className="form-group">
-                                            <label>Select Example</label>
-                                            <select className="form-control">
-                                                <option>One Vale</option>
-                                                <option>Two Vale</option>
-                                                <option>Three Vale</option>
-                                                <option>Four Vale</option>
-                                            </select>
+                                            <label>Shpp Mobile</label>
+                                            <input value={formvalue.mobile} onChange={changeHandel} className="form-control" name="mobile" type="number" />
                                         </div>
-                                        <hr />
                                         <div className="form-group">
-                                            <label>Multiple Select Example</label>
-                                            <select multiple className="form-control">
-                                                <option>One Vale</option>
-                                                <option>Two Vale</option>
-                                                <option>Three Vale</option>
-                                                <option>Four Vale</option>
-                                            </select>
+                                            <label>Shop Address</label>
+                                            <textarea value={formvalue.address} onChange={changeHandel} name="address" className="form-control" rows={3} defaultValue={""} />
                                         </div>
-                                        <hr />
                                         <div className="form-group">
-                                            <label>Checkboxes</label>
-                                            <div className="checkbox">
-                                                <label>
-                                                    <input type="checkbox" defaultValue />Checkbox Example One
-                                                </label>
-                                            </div>
-                                            <div className="checkbox">
-                                                <label>
-                                                    <input type="checkbox" defaultValue />Checkbox Example Two
-                                                </label>
-                                            </div>
-                                            <div className="checkbox">
-                                                <label>
-                                                    <input type="checkbox" defaultValue />Checkbox Example Three
-                                                </label>
-                                            </div>
-                                            <div className="checkbox">
-                                                <label>
-                                                    <input type="checkbox" defaultValue />Checkbox Example Four
-                                                </label>
-                                            </div>
+                                            <label>Shpp Image</label>
+                                            <input value={formvalue.image} onChange={changeHandel} className="form-control" name="image" type="url" />
                                         </div>
-                                        <hr />
-                                        <div className="form-group">
-                                            <label>Radio Button Examples</label>
-                                            <div className="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" defaultValue="option1" defaultChecked />Radio Example One
-                                                </label>
-                                            </div>
-                                            <div className="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" defaultValue="option2" />Radio Example Two
-                                                </label>
-                                            </div>
-                                            <div className="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" defaultValue="option3" />Radio Example Three
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form></div>
-                                <button type="submit" className="btn btn-info">Send Message </button>
+                                        <button type="submit" className="btn btn-info"> Submit </button>
+                                    </form>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Afooter/>
+            <Afooter />
         </div>
 
     )

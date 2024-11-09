@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Afooter from '../component/Afooter'
 import Aheader from '../component/Aheader'
+import { toast } from 'react-toastify'
 
 function Manage_appointment() {
 
@@ -22,6 +23,7 @@ function Manage_appointment() {
         if(res.status==200)
         {
             fetch();
+            toast.success('Delete Success');
         }
     }
     return (

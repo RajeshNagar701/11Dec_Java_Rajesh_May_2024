@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Aheader from '../component/Aheader'
 import Afooter from '../component/Afooter'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 function Manage_location() {
+    // useffect hooks called function automatic wehen com load
+    useEffect(() => {
+        fetch();
+    })
+
+    const [data, setData] = useState([]);
+    const fetch = async () => {
+        const res = await axios.get(`http://localhost:3000/location`);
+        console.log(res.data);
+        setData(res.data);
+    }
+    const deleteHandel = async (id) => {
+        const res = await axios.delete(`http://localhost:3000/location/${id}`);
+        if(res.status==200)
+        {
+            fetch();
+            toast.success('Delete Success');
+        }
+    }
     return (
         <div>
             <Aheader/>
@@ -26,23 +47,26 @@ function Manage_location() {
                                             <thead>
                                                 <tr>
                                                     <th>Id</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Image</th>
+                                                    <th>Location</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr className="odd gradeX">
-                                                    <td>1</td>
-                                                    <td>Raj</td>
-                                                    <td>Raj@gmail.com</td>
-                                                    <td className="center">Image</td>
-                                                    <td className="center">
-                                                        <button className='btn btn-primary'>Edit</button>
-                                                        <button className='btn btn-danger'>Delete</button>
-                                                    </td>
-                                                </tr>
+                                            {
+                                                    data && data.map((value, index, arr) => {
+                                                        return (
+                                                            <tr className="odd gradeX">
+                                                                <td>{value.id}</td>
+                                                                <td>{value.location_name}</td>
+                                                                <td className="center">
+                                                                    <button className='btn btn-primary'>Edit</button>
+                                                                    <button className='btn btn-danger'  onClick={()=>deleteHandel(value.id)}>Delete</button>
+                                                                </td>
+                                                            </tr>
+
+                                                        )
+                                                    })
+                                                }
                                                 
                                             </tbody>
                                         </table>

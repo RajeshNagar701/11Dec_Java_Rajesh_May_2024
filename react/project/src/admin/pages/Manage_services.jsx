@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Afooter from '../component/Afooter'
 import Aheader from '../component/Aheader'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 function Manage_services() {
     // useffect hooks called function automatic wehen com load
@@ -21,6 +22,7 @@ function Manage_services() {
         if(res.status==200)
         {
             fetch();
+            toast.success('Delete Success');
         }
     }
 

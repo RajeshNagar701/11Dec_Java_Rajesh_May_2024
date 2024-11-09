@@ -17,14 +17,16 @@ import Add_artist from "./admin/pages/Add_artist";
 import Alogin from "./admin/pages/Alogin";
 import Signup from "./website/pages/Signup";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <BrowserRouter>
+    
+      <ToastContainer></ToastContainer>
+
       <Routes>
-        
-        
-        
         <Route path='/' element={<><Index /></>}></Route>
         <Route path='/about' element={<><About /></>}></Route>
         <Route path='/services' element={<><Services /></>}></Route>

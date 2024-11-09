@@ -3,32 +3,60 @@ import Header from '../component/Header'
 import Footer from '../component/Footer'
 import { Helmet } from 'react-helmet'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 function Contact() {
 
   const [formvalue, setFormvalue] = useState({
     id: "",
-    name:"",
+    name: "",
     email: "",
     mobile: "",
     comment: "",
-});
+  });
 
-const changeHandel = (e) => {
+  const changeHandel = (e) => {
     setFormvalue({ ...formvalue, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
     console.log(formvalue);
-}
-
-const onSubmithandel =async (e) => {
-  e.preventDefault(); // on submit not refresh page
-  const res=await axios.post(`http://localhost:3000/contact`,formvalue);
-  console.log(res);
-  if(res.status==201)
-  {
-    alert('INquiry submitted suuccess !');
-    setFormvalue({...formvalue,name:"",email:"",mobile:"",comment:""});
-    return false;
   }
-}
+
+  function validation() {
+
+    var result = true;
+    if (formvalue.name == "") {
+      result = false;
+      toast.error('Name field is required');
+      return false;
+    }
+    if (formvalue.email == "") {
+      result = false;
+      toast.error('email field is required');
+      return false;
+    }
+    if (formvalue.mobile == "") {
+      result = false;
+      toast.error('mobile field is required');
+      return false;
+    }
+    if (formvalue.comment == "") {
+      result = false;
+      toast.error('comment field is required');
+      return false;
+    }
+    return result;
+
+  }
+  const onSubmithandel = async (e) => {
+    e.preventDefault(); // on submit not refresh page
+    if (validation()) {
+      const res = await axios.post(`http://localhost:3000/contact`, formvalue);
+      console.log(res);
+      if (res.status == 201) {
+        toast.success('INquiry submitted suuccess !');
+        setFormvalue({ ...formvalue, name: "", email: "", mobile: "", comment: "" });
+        return false;
+      }
+    }
+  }
 
   return (
     <div>

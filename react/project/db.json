@@ -1,32 +1,33 @@
 {
   "location": [
     {
-      "id": "1",
+      "id": "1729747852741",
+      "location_name": "Sattelite"
+    },
+    {
+      "id": "1729747869278",
+      "location_name": "Gota"
+    },
+    {
+      "id": "1729747884037",
       "location_name": "Maninagar"
     },
     {
-      "id": "2",
-      "location_name": "Satelite"
+      "id": "1729747893149",
+      "location_name": "Raipur"
     },
     {
-      "id": "3",
-      "location_name": "Gota"
+      "id": "1729747903660",
+      "location_name": "Lal Darwaja"
     }
   ],
   "contact": [
     {
-      "id": "1729575335761",
-      "name": "nagar",
-      "email": "nagar@gmail.com",
-      "mobile": "21654564",
-      "comment": "hello friends"
-    },
-    {
-      "id": "1729575370874",
-      "name": "mahesh",
-      "email": "mahesh@gmail.com",
-      "mobile": "46874664",
-      "comment": "helloo address "
+      "id": "1731134004740",
+      "name": "ganesh",
+      "email": "admin@gmail.com",
+      "mobile": "1234567891",
+      "comment": "sadsadasdsad"
     }
   ],
   "admin": [
@@ -39,15 +40,6 @@
   ],
   "customer": [
     {
-      "id": "1729575943074",
-      "name": "mahesh",
-      "email": "mahesh@gmail.com",
-      "mobile": "46874664",
-      "password": "1234",
-      "image": "https://via.placeholder.com/600/92c952",
-      "status": "Unblock"
-    },
-    {
       "id": "1729576158410",
       "name": "nirav",
       "email": "nirav@gmail.com",
@@ -59,28 +51,15 @@
   ],
   "artist": [
     {
-      "id": "1",
-      "name": "Raj Nagar",
-      "shop_name": "Raj Makup",
-      "email": "rajnagar@gmail.com",
+      "id": "1729748861247",
+      "name": "Mahima",
+      "shop_name": "Mahima Beauty Care & Academy",
+      "email": "mahima@gmail.com",
       "password": "1234",
-      "mobile": "123456789",
-      "loc_id": "1",
-      "address": "Maninagar cross road",
-      "image": "https://via.placeholder.com/150/92c952",
-      "status": "Unblock"
-    },
-    {
-      "id": "2",
-      "name": "Heena Nagar",
-      "shop_name": "Heena Makup",
-      "email": "Heenanagar@gmail.com",
-      "password": "1234",
-      "mobile": "123456789",
-      "loc_id": "2",
-      "address": "satelite cross road",
-      "image": "https://via.placeholder.com/150/92c952",
-      "status": "Unblock"
+      "mobile": "1234567891",
+      "loc_id": "1729747852741",
+      "address": "GF 8, Aalishan Complex, near RR Dwivedi School Road, New Giriraj Society, Mahavir Nagar, Meldinagar, Vejalpur, Ahmedabad, Gujarat 380051",
+      "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=bBtNgsnjS6JkirEmfuES9Q&cb_client=search.gws-prod.gps&yaw=293.82492&pitch=0&thumbfov=100&w=520&h=175"
     }
   ],
   "services": [
@@ -131,17 +110,7 @@
       "mobile": "4564654"
     }
   ],
-  "appointment": [
-    {
-      "id": "1",
-      "ser_id": "1",
-      "art_id": "1",
-      "cust_id": "2",
-      "app_date": "2024-12-12",
-      "app_time": "16:30",
-      "remark": "kindely starts on time"
-    }
-  ],
+  "appointment": [],
   "feedback": [
     {
       "id": "1",
